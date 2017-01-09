@@ -1,0 +1,35 @@
+<fieldset>
+    
+
+    <ul>
+        <li ng-repeat="externalLogin in account.externalLogins">
+            <a target="_self" href="/api/account/ExternalLogin?provider={{externalLogin.authenticationScheme}}&returnUrl=/">{{externalLogin.displayName}}</a>
+        </li>
+    </ul>
+
+</fieldset>
+
+<fieldset >
+    <legend style="color:black">Login</legend>
+    <ul>
+        <li ng-repeat="error in controller.validationMessages">
+            {{error}}
+        </li>
+    </ul>
+     <br />
+    <form ng-submit="controller.login()">
+        <div>
+            <label style="color:black">Email:</label><br />
+           
+            <input size="40" class="alert-info" ng-model="controller.loginUser.email" />
+        </div>
+        <div>
+            <label style="color:black">Password:</label><br />
+         
+            <input size="40" class="alert-info" ng-model="controller.loginUser.password" />
+        </div>
+        <br />
+        <input class="alert-danger" style="color:black" type="submit" value="Login" />
+        <a style="color:darkblue" href="/register">Register</a>
+    </form>
+</fieldset>

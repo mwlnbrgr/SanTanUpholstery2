@@ -1,0 +1,30 @@
+﻿<div class="text-center">
+    <h1 style="color:darkblue">Contact Us</h1>
+    <h3 style="color:black">{{controller.message}}</h3>
+</div>
+
+<div >
+    <img  class="img-align1" src="../../images/support.jpg" />
+</div>
+<div style="color:black">
+</div>
+<div>
+    <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+        <div>
+            <label style="color:black" for="name">Your Name:</label><br />
+            <input id="name" class=".form-align alert-info input" style="color:black" name="name" type="text" value="" size="40" /><br />
+        </div>
+        <div>
+            <label style="color:black" for="email">Your email:</label><br />
+            <input id="email" class="alert-info input" style="color:black" name="email" type="text" value="" size="40" /><br />
+        </div>
+        <div>
+            <label style="color:black" for="message">Your Message:</label><br />
+            <textarea id="message" class="alert-info input" style="color:black" name="message" rows="12" cols="110"></textarea><br />
+        </div>
+        <div>
+            <br />
+            <input class="alert-danger" style="color:black" id="submit_button" type="submit" value="Send email" />
+        </div>
+    </form>
+</div>

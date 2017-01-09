@@ -1,0 +1,25 @@
+﻿<div class="text-center">
+    <h1>GALLERY OF OUR RECENT PROJECTS</h1>
+    <h3>{{controller.message}}</h3>
+</div>
+
+<div>
+    <a class="btn btn-info" ng-href="/gallery">Add an image</a>
+    <div class="panel">
+        <div class="panel-heading">Images</div>
+        <div class="panel-body">
+            <table >                
+                <tbody>
+                    <tr ng-repeat="image in controller.images">
+                        <td style="align-items:center"><img src="{{image.imageUrl}}" /></td>
+                        <td>                          
+                        </td>
+                        <td>
+                            <a class="btn btn-danger" ui-sref="removeImage({id:image.id})">Remove</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
