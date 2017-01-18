@@ -33,6 +33,20 @@ namespace PracticeStuff.Data
                 // add claims
                 await userManager.AddClaimAsync(stephen, new Claim("IsAdmin", "true"));
             }
+            var matt = await userManager.FindByNameAsync("mattellenberger43@gmail.com");
+            if (matt == null)
+            {
+                // create user
+                matt = new ApplicationUser
+                {
+                    UserName = "mattellenberger43@gmail.com",
+                    Email = "mattellenberger43@gmail.com"
+                };
+                await userManager.CreateAsync(matt, "G0lflover!");
+
+                // add claims
+                await userManager.AddClaimAsync(matt, new Claim("IsAdmin", "true"));
+            }
 
             // Ensure Mike (not IsAdmin)
             var mike = await userManager.FindByNameAsync("Mike@CoderCamps.com");

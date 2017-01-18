@@ -10,6 +10,8 @@ namespace PracticeStuff.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<ServiceRequest> ServiceRequests { get; set; }
+        public DbSet<Product> Products { get; set; }
         public  DbSet<Image> Images { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

@@ -16,7 +16,7 @@ namespace PracticeStuff {
             .state('secret', {
                 url: '/secret',
                 templateUrl: '/ngApp/views/secret.html',
-                controller: PracticeStuff.Controllers.SecretController,
+                controller: PracticeStuff.Controllers.LoginController,
                 controllerAs: 'controller'
             })
             .state('login', {
@@ -47,6 +47,72 @@ namespace PracticeStuff {
                 url: '/gallery',
                 templateUrl: '/ngApp/views/gallery.html',
                 controller: PracticeStuff.Controllers.ImageController,
+                controllerAs: 'controller'
+            })
+            .state('addImage', {
+                url: '/addImage',
+                templateUrl: '/ngApp/views/addImage.html',
+                controller: PracticeStuff.Controllers.ImageController,
+                controllerAs: 'controller'
+            })
+            .state('removeImage', {
+                url: '/removerImage',
+                templateUrl: '/ngApp/views/deleteImage.html',
+                controller: PracticeStuff.Controllers.ImageController,
+                controllerAs: 'controller'
+            })
+            .state('productList', {
+                url: '/productList',
+                templateUrl: '/ngApp/views/productList.html',
+                controller: PracticeStuff.Controllers.ProductController,
+                controllerAs: 'controller'
+            })
+            .state('addProduct', {
+                url: '/addProduct',
+                templateUrl: '/ngApp/views/addProduct.html',
+                controller: PracticeStuff.Controllers.ProductController,
+                controllerAs: 'controller'
+            })
+            .state('removeProduct', {
+                url: '/removeProduct/:id',
+                templateUrl: '/ngApp/views/deleteProduct.html',
+                controller: PracticeStuff.Controllers.ProductController,
+                controllerAs: 'controller'
+            })
+            .state('editProduct', {
+                url: '/editProduct/:id',
+                templateUrl: '/ngApp/views/editProduct.html',
+                controller: PracticeStuff.Controllers.EditProductController,
+                controllerAs: 'controller'
+            })
+            .state('serviceRequestList', {
+                url: '/serviceRequestList',
+                templateUrl: '/ngApp/views/serviceRequestList.html',
+                controller: PracticeStuff.Controllers.ServiceRequestController,
+                controllerAs: 'controller'
+            })
+            .state('srDetails', {
+                url: '/srDetails/:id',
+                templateUrl: '/ngApp/views/srDetails.html',
+                controller: PracticeStuff.Controllers.SRDetailsController,
+                controllerAs: 'controller'
+            })
+            .state('addServiceRequest', {
+                url: '/addServiceRequest',
+                templateUrl: '/ngApp/views/addServiceRequest.html',
+                controller: PracticeStuff.Controllers.ServiceRequestController,
+                controllerAs: 'controller'
+            })
+            .state('removeServiceRequest', {
+                url: '/removeServiceRequest/:id',
+                templateUrl: '/ngApp/views/deleteServiceRequest.html',
+                controller: PracticeStuff.Controllers.ServiceRequestController,
+                controllerAs: 'controller'
+            })
+            .state('editServiceRequest', {
+                url: '/editServiceRequest/:id',
+                templateUrl: '/ngApp/views/editServiceRequest.html',
+                controller: PracticeStuff.Controllers.EditServiceRequestController,
                 controllerAs: 'controller'
             })
             .state('contact', {

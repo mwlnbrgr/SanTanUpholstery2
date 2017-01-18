@@ -1,0 +1,35 @@
+﻿<div class="text-center">
+    <h1 style="color:darkblue">Service Request Page</h1>
+    <h3>{{controller.message}}</h3>
+</div>
+
+<div class="col-md-6 col-md-offset-3">
+    <a class="btn btn-info" ng-href="/addServiceRequest">Add a Request For Service</a>
+    <div class="panel">
+        <div class="panel-heading"> Service Requests</div>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Customer 
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="serviceRequest in controller.serviceRequests">
+                        <td>
+                            {{serviceRequest.id}}
+                        </td>                                  
+                        <td>
+                            <a ui-sref="srDetails({id:serviceRequest.id})">{{serviceRequest.customerName}}</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

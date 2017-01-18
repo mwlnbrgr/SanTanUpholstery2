@@ -12,24 +12,20 @@
         }
 
         public getImages() {
-            return this.$http.get(this.resource);
+           return this.$http.get(this.resource);
         }
 
         public addImage(image) {
             this.$http.post(this.resource, image).then((response) => {
-                this.$state.go("home");
+                this.$state.go("gallery");
             })
         }
         public removeImage() {
             this.$http.delete(this.resource + this.$stateParams["id"]).then((response) => {
-                this.$state.go("home");
+                this.$state.go("gallery");
             })
         }
-        public editImage(image) {
-            this.$http.post(this.resource, image).then((response) => {
-                this.$state.go("home");
-            })
-        }
+       
 
 
     }
