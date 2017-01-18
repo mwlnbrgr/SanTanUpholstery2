@@ -1,0 +1,9 @@
+﻿<h2 style="color:darkblue">Add A Service Request</h2>
+
+<form ng-submit="controller.addServiceRequest()">
+    <label style="color:black">Customer Name</label>
+    <input style="color:black" class="alert-info" ng-model="controller.serviceRequest.customer" />
+    <label style="color:black">Product Id</label>
+    <input style="color:black" class="alert-info" ng-model="controller.serviceRequest.product" />
+    <button style="color:black" class="alert-danger" type="submit">Add</button>
+</form>

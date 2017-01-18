@@ -8,9 +8,10 @@ using PracticeStuff.Data;
 namespace PracticeStuff.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170110151857_product")]
+    partial class product
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -193,25 +194,9 @@ namespace PracticeStuff.Data.Migrations
 
                     b.Property<decimal>("Price");
 
-                    b.Property<int?>("ServiceRequestId");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ServiceRequestId");
 
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("PracticeStuff.Models.ServiceRequest", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("CustomerName");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ServiceRequests");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>
@@ -249,13 +234,6 @@ namespace PracticeStuff.Data.Migrations
                         .WithMany("Roles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("PracticeStuff.Models.Product", b =>
-                {
-                    b.HasOne("PracticeStuff.Models.ServiceRequest")
-                        .WithMany("Products")
-                        .HasForeignKey("ServiceRequestId");
                 });
         }
     }

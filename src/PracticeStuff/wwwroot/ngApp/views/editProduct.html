@@ -1,0 +1,9 @@
+﻿<h2 style="color:darkblue">Edit A Product</h2>
+
+<form ng-submit="controller.editProduct()">
+    <label style="color:black">Name</label>
+    <input class="alert-info" ng-model="controller.product.name" />
+    <label style="color:black">Price</label>
+    <input class="alert-info" ng-model="controller.product.price" />
+    <button class="alert-danger" type="submit">Change</button>
+</form>

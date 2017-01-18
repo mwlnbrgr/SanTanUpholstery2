@@ -57,6 +57,8 @@ namespace PracticeStuff
             services.AddTransient<ISmsSender, AuthMessageSender>();
             services.AddScoped<IGenericRepo, GenericRepo>();
             services.AddScoped<IImageService, ImageService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IServiceRequestService, ServiceRequestService>();
             
 
             

@@ -1,0 +1,37 @@
+﻿<div style="color:darkblue" class="text-center">
+    <h2>Service Request Detail</h2>
+</div>
+<div class=" col-md-6 col-md-offset-3">
+    <div class="panel">
+        <div style="color:darkblue" class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            Product Id
+                        </th>
+                        <th>
+                            Product Name
+                        </th>
+                        <th>
+                            Product Price
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="product in controller.serviceRequest.products">
+                        <td>
+                            {{product.id}}
+                        </td>
+                        <td>
+                            {{product.name}}
+                        </td>                       
+                        <td>
+                            {{product.price}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

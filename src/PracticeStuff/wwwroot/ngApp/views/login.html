@@ -1,6 +1,8 @@
-<fieldset>
-    
+<h1 style="color:darkblue" >Login</h1>
 
+
+
+<fieldset>
     <ul>
         <li ng-repeat="externalLogin in account.externalLogins">
             <a target="_self" href="/api/account/ExternalLogin?provider={{externalLogin.authenticationScheme}}&returnUrl=/">{{externalLogin.displayName}}</a>
@@ -10,7 +12,7 @@
 </fieldset>
 
 <fieldset >
-    <legend style="color:black">Login</legend>
+<legend style="color:darkblue"></legend>
     <ul>
         <li ng-repeat="error in controller.validationMessages">
             {{error}}
@@ -21,15 +23,16 @@
         <div>
             <label style="color:black">Email:</label><br />
            
-            <input size="40" class="alert-info" ng-model="controller.loginUser.email" />
+            <input style="color:black" size="40" class="alert-info" ng-model="controller.loginUser.email" />
         </div>
         <div>
             <label style="color:black">Password:</label><br />
          
-            <input size="40" class="alert-info" ng-model="controller.loginUser.password" />
+            <input style="color:black" size="40" class="alert-info" ng-model="controller.loginUser.password" />
         </div>
         <br />
-        <input class="alert-danger" style="color:black" type="submit" value="Login" />
+        
+        <input class="alert-danger" style="color:black" type="submit" value="Login" /><br />
         <a style="color:darkblue" href="/register">Register</a>
     </form>
 </fieldset>

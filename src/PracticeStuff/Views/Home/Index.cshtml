@@ -34,29 +34,42 @@
         <header>
             <img src="~/images/test.jpg" />
         </header>
-    </div>
-   
+    </div>   
     <div>
         <div class="slider">
             <figure>
+                <div class="slide">                   
+                    <img src="~/images/1.jpg" />
+                </div>
                 <div class="slide">
-
                     <img src="~/images/sidelines0.jpg" />
                 </div>
-
                 <div class="slide">
-
                     <img src="~/images/sidelines1.jpg" />
                 </div>
-
                 <div class="slide">
-
                     <img src="~/images/sidelines2.jpg" />
                 </div>
-
                 <div class="slide">
-
-                    <img src="~/images/sidelines3.jpg" />
+                    <img src="~/images/sidelines3.jpg" /> 
+                </div>
+                <div class="slide">
+                    <img src="~/images/oink1.jpg" /> 
+                </div>
+                <div class="slide">
+                    <img src="~/images/oink2.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="~/images/oink3.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="~/images/2.jpg" />
+                </div>                
+                <div class="slide">
+                    <img src="~/images/amf1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="~/images/amf2.jpg" />
                 </div>
             </figure>
         </div>
@@ -64,43 +77,30 @@
     <div>
         <div>
             <div class="container">
-             
-                @*<div>
-                        <a href="/">Home</a> /
-                        <a href="/about">About</a>
-
-                        / <a href="/secret">Secret</a> /
-                        <a href="/login" ng-show="!account.isLoggedIn()">Login</a>
-                        <a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">Logout</a>
-                        <div ng-show="account.isLoggedIn()">
-                            [{{account.getUserName()}}]
-                        </div>
-                    </div>*@
-
                <br />
                 <ui-view></ui-view>
             </div>
         </div>
     </div>
     <footer class="footer-styling" style="color: #808080">
-        <div class="col-lg-7 col-lg-push-3">
-            <nav>
-                <strong>
-                    <a style="color: #808080" class="navbar-text " href="/">Home</a>
-                    <a style="color: #808080" class="navbar-text">|</a>
-                    <a style="color: #808080" class="navbar-text" href="/about">About</a>
-                    <a style="color: #808080" class="navbar-text">|</a>
-                    <a style="color: #808080" class="navbar-text" href="/gallery">Gallery</a>
-                    <a style="color: #808080" class="navbar-text">|</a>
-                    <a style="color: #808080" class="navbar-text" href="/contact.html">Contact</a>          
-                    <a style="color: #808080" class="navbar-text">|</a>
-                    <a style="color: #808080" class="navbar-text" href="/login" ng-show="!account.isLoggedIn()">Login</a>
-                    <a style="color: #808080" class="navbar-text" href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">Logout</a>
-                </strong>
-            </nav>
-        </div>
-        <br />
-        <br />
+          
+            <div >               
+                    <nav class="col-lg-offset-3">
+                        <strong>
+                            <a style="color: #808080" class="navbar-text" href="/">Home</a>
+                            <a style="color: #808080" class="navbar-text">|</a>
+                            <a style="color: #808080" class="navbar-text" href="/about">About</a>
+                            <a style="color: #808080" class="navbar-text">|</a>
+                            <a style="color: #808080" class="navbar-text" href="/gallery">Gallery</a>
+                            <a style="color: #808080" class="navbar-text">|</a>
+                            <a style="color: #808080" class="navbar-text" href="/contact">Contact</a>
+                            <a style="color: #808080" class="navbar-text">|</a>
+                            <a style="color: #808080" class="navbar-text" href="/login" ng-show="!account.isLoggedIn()">Login</a>
+                            <a style="color: #808080" class="navbar-text" href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">Logout</a>
+                        </strong>
+                    </nav>              
+            </div>
+         
         <div style="clear:both">
             <div class="pull-right">
                 &#9743 (480) 808-6195
@@ -108,15 +108,17 @@
                 &#9993 santanupholstery@yahoo.com
             </div>
 
-            <div class="left">
-                <div class="col-lg-1">
-                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fsantanupholstery&layout=standard&action=like&size=large&show_faces=false&share=true&height=35&appId" width="200" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <div class="pull-left">
+                <div >
+                    <iframe src ="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fsantanupholstery&layout=standard&action=like&size=large&show_faces=false&share=true&height=35&appId" width="300" height="35" style="border:none;overflow:hidden;color:antiquewhite" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                 </div>
             </div>
         </div>
         <br />
         <br />
-        <center><h5>&#xA9; 2017 San Tan Mobile Upholstery  All Rights Reserved</h5></center>
+   
+
+        <h5 class=" col-lg">&#xA9; 2017 San Tan Mobile Upholstery  All Rights Reserved</h5>
         @*<div  style="bottom:inherit">&#xA9; 2017 SanTan Mobile Upholstery  All Rights Reserved</div>*@
         @*<div class="col-lg-4 col-lg-push-1" style="bottom:inherit">&#xA9; 2017 SanTan Mobile Upholstery  All Rights Reserved</div>*@
     </footer>
@@ -132,12 +134,14 @@
     <!-- App Files-->
     <script src="/ngapp/app.js"></script>
     <script src="/ngapp/controllers/controllers.js"></script>
-    <script src="/ngapp/services/services.js"></script>
-
-
+   
     <!-- Security -->
+    <script src="~/ngApp/services/serviceRequest.js"></script>
     <script src="/ngapp/controllers/accountcontroller.js"></script>
     <script src="/ngapp/services/accountservice.js"></script>
-
+    <script src="~/ngApp/services/productService.js"></script>
+    
+    
 </body>
 </html>
+ 
